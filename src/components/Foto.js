@@ -24,7 +24,7 @@ class Foto extends Component {
 
     addFotoButton = () => {
         this.props.onAddFoto(this.state.foto);
-        console.log("foto");
+
         this.setState({ foto: "" });
     };
 }
