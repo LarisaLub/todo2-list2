@@ -8,7 +8,6 @@ class Foto extends Component {
     };
 
     render() {
-        console.log(addFoto);
         return (
             <div>
                 <button onClick={this.addFotoButton}> foto </button>
