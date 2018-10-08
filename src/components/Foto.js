@@ -8,7 +8,6 @@ class Foto extends Component {
     };
 
     render() {
-        console.log(addFoto);
         return (
             <div>
                 <button onClick={this.addFotoButton}> foto </button>
@@ -25,7 +24,7 @@ class Foto extends Component {
 
     addFotoButton = () => {
         this.props.onAddFoto(this.state.foto);
-        console.log("foto");
+
         this.setState({ foto: "" });
     };
 }
