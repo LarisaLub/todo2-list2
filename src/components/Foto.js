@@ -8,6 +8,7 @@ class Foto extends Component {
     };
 
     render() {
+        console.log("for giwt");
         return (
             <div>
                 <button onClick={this.addFotoButton}> foto </button>
