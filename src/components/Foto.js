@@ -8,11 +8,13 @@ class Foto extends Component {
     };
 
     render() {
-        console.log("for giwt");
+        console.log("for gift");
         return (
             <div>
                 <button onClick={this.addFotoButton}> foto </button>
-                {this.props.isFoto ? <img id="image" src="l.jpg" /> : null}
+                {this.props.isFoto ? (
+                    <img id="image" src="http://kharchuk.ru/JavaScript.pdf" />
+                ) : null}
             </div>
         );
     }
@@ -46,3 +48,9 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(Foto);
+
+class Books extends Component {
+    componentDidMount() {
+        this.props.onLoadAllArticles();
+    }
+}

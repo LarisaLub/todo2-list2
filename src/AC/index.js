@@ -1,5 +1,5 @@
 import { TODO, REMOVE, DESCRIP, COMENTS, DELETE, FOTO, IS_FOTO } from "../constants";
-import descrip from "../reduser/descrip";
+//import descrip from "../reduser/descrip";
 
 export const addTodo = title => {
     return {
@@ -50,9 +50,18 @@ export const deleteComents = coment => {
     };
 };
 
+// export const addFoto = foto => {
+//     return {
+//         type: IS_FOTO,
+//         payload: foto
+//     };
+// };
+
 export const addFoto = foto => {
-    return {
-        type: IS_FOTO,
-        payload: foto
+    return dispatch => {
+        dispatch({
+            type: IS_FOTO,
+            payload: foto
+        });
     };
 };
