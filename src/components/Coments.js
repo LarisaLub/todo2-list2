@@ -8,19 +8,12 @@ class Coments extends Component {
     };
 
     render() {
-        console.log("coments", this.state);
-        // const { coments } = this.props;
         return (
-            <div>
+            <div class="button1">
                 <button onClick={this.addComentsButton}> coments </button>
                 <br />
 
-                <input
-                    type="text"
-                    name="coments"
-                    value={this.state.coments}
-                    onChange={this.changeComents}
-                />
+                <input value={this.state.coments} onChange={this.changeComents} />
             </div>
         );
     }

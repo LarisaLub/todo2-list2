@@ -8,12 +8,10 @@ import coments from "../reduser/coments";
 
 class Comentdescrip extends Component {
     deleteComents = coments => {
-        console.log(coments);
         this.props.onDeleteComents(coments);
     };
 
     render() {
-        console.log(this.props.onDeleteComents);
         const { coments } = this.props;
         return (
             <div>

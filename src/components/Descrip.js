@@ -9,7 +9,9 @@ class Descrip extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.addDescripButton}> description </button>
+                <button class="button2" onClick={this.addDescripButton}>
+                    description
+                </button>
                 <br />
                 <input
                     type="text"

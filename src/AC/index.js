@@ -1,4 +1,4 @@
-import { TODO, REMOVE, DESCRIP, COMENTS, DELETE, FOTO, IS_FOTO } from "../constants";
+import { TODO, REMOVE, DESCRIP, COMENTS, DELETE, BOOK, IS_FOTO } from "../constants";
 //import descrip from "../reduser/descrip";
 
 export const addTodo = title => {
@@ -50,18 +50,22 @@ export const deleteComents = coment => {
     };
 };
 
-// export const addFoto = foto => {
-//     return {
-//         type: IS_FOTO,
-//         payload: foto
-//     };
-// };
-
-export const addFoto = foto => {
+export const Book = book => {
     return dispatch => {
         dispatch({
-            type: IS_FOTO,
-            payload: foto
+            type: BOOK,
+            payload: book
         });
+
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=толстой`)
+            .then(res => {
+                return res.json();
+            })
+            .then(response =>
+                dispatch({
+                    type: BOOK,
+                    payload: response.items
+                })
+            );
     };
 };

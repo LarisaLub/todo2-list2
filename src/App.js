@@ -8,10 +8,7 @@ import Coments from "./components/Coments";
 import { Provider } from "react-redux";
 import Descrip from "./components/Descrip";
 import Comentdescrip from "./components/Comentdescrip";
-import Foto from "./components/Foto";
-import thunk from "redux-thunk";
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
-import createSagaMiddleware from "redux-saga";
+import Book from "./components/Book";
 
 class App extends Component {
     render() {
@@ -24,7 +21,7 @@ class App extends Component {
                     <Descrip />
                     <Datadescrip />
                     <Comentdescrip />
-                    <Foto />
+                    <Book />
                 </div>
             </Provider>
         );

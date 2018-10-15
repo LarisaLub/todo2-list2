@@ -7,12 +7,10 @@ import toggleClose from "../toggleClose";
 
 class Datadescrip extends Component {
     deleteDescrip = descrip => {
-        console.log(descrip);
         this.props.onDeleteDescrip(descrip);
     };
 
     render() {
-        console.log(this.props.onDeleteDescrip);
         const { descrip } = this.props;
         return (
             <div>
@@ -24,7 +22,7 @@ class Datadescrip extends Component {
                             }}
                             key={index}>
                             {item}
-                            <button onClick={this.DescripButton}> delete</button>
+                            <button onClick={this.DescripButton}> d</button>
                         </p>
                     );
                 })}
@@ -34,8 +32,6 @@ class Datadescrip extends Component {
 }
 
 const mapStateToProps = state => {
-    //console.log("state");
-    //console.log(state);
     return {
         descrip: state.descrip.descrip
     };

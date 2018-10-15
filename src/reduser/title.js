@@ -22,6 +22,13 @@ export default (state = defaultState, action) => {
                 titles: state.titles.filter(item => item !== payload)
             };
         }
+
+        // case ADD: {
+        //     return {
+        //         ...state,
+        //         titles: state.titles.filter(item => item !== payload)
+        //     };
+        // }
     }
 
     return state;
