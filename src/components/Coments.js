@@ -9,7 +9,7 @@ class Coments extends Component {
 
     render() {
         return (
-            <div class="button1">
+            <div>
                 <button onClick={this.addComentsButton}> coments </button>
                 <br />
 

@@ -10,9 +10,7 @@ class Todo extends Component {
     render() {
         return (
             <div>
-                <button class="button3" onClick={this.addTitle}>
-                    add
-                </button>
+                <button onClick={this.addTitle}>add</button>
                 <br />
                 <input
                     type="text"
